@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import Wizard from "./core/components/wizard/wizard.js"
+import ShippingLabelMaker from "./features/shipping-label-maker/shipping-label-maker.js"
 
-class ShippingLabelMaker extends Component {
+class App extends Component {
     render() {
         return (
             <div>
-                <Wizard />
+                <ShippingLabelMaker />
             </div>
         )
     }
 }
 
-export default ShippingLabelMaker;
+export default App;
