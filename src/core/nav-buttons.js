@@ -1,14 +1,15 @@
 import React from "react";
+import Button from "@material-ui/core/Button";
 
 const NavButtons = props => {
     const { current, nextSteps, previousSteps } = props;
     return (
         <div>
             {current === 1 ? null : (
-                <button onClick={previousSteps}>Back</button>
+                <Button variant="contained" color="secondary" onClick={previousSteps}>Back</Button>
             )}
             {current > 4 ? null : (
-                <button onClick={nextSteps}>Next</button>
+                <Button variant="contained" color="primary" onClick={nextSteps}>Next</Button>
             )}
         </div>
     )
