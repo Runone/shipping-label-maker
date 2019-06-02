@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import Wizard from "../../../src/core/components/wizard/wizard.js"
+import Header from "../../../src/core/header.js";
 
 class ShippingLabelMaker extends Component {
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             isComplete: false,
             shippingInfo: {
@@ -35,8 +37,10 @@ class ShippingLabelMaker extends Component {
     render() {
         return (
             <div>
-
+                <Wizard header={Header} wizardContext={this.state} onComplete={this.createLabel}/>
             </div>
         )
     }
 }
+
+export default ShippingLabelMaker;
