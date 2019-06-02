@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 
 class Wizard extends Component {
     constructor(props) {
@@ -10,6 +12,7 @@ class Wizard extends Component {
 
         this.nextSteps = this.nextSteps.bind(this);
         this.previousSteps = this.previousSteps.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
     //proceed to next steps
     nextSteps() {
@@ -25,6 +28,12 @@ class Wizard extends Component {
             currentStep: currentStep - 1
         })
     }
+    //handle input field changes
+    handleChange = input => (event) => {
+        this.setState({
+            [input]: event.target.value
+        })
+    };
     render() {
         return(
             <div>
@@ -34,6 +43,13 @@ class Wizard extends Component {
     }
 
 }
+
+Wizard.propTypes = {
+    header: PropTypes.func.isRequired,
+    steps: PropTypes.array.isRequired,
+    wizardContext: PropTypes.object.isRequired,
+    onComplete: PropTypes.func.isRequired
+};
 
 
 export default Wizard;
