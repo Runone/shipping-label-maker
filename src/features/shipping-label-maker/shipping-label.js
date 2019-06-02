@@ -5,7 +5,7 @@ const ShippingLabel = (props) => {
     const { from, to, weight, shippingOption } = props.data;
     return (
         <div>
-            <h1>{getShippingOption(shippingOption)}</h1>
+            <h1>{getShippingOption(shippingOption.shippingOption)}</h1>
             <h3>From</h3>
             <p> {from.name} </p>
             <p> {from.street} </p>
@@ -14,8 +14,7 @@ const ShippingLabel = (props) => {
             <p> {to.name} </p>
             <p> {to.street} </p>
             <p> {to.city} {to.state}, {to.zip} </p>
-            <p></p>
-            <p><h3>{weight} Lbs.</h3></p>
+            <h3>{weight.weight} Lbs.</h3>
         </div>
     )
 };

@@ -2,7 +2,6 @@ import React from "react";
 
 const NavButtons = props => {
     const { current, nextSteps, previousSteps } = props;
-
     return (
         <div>
             {current === 1 ? null : (
