@@ -19,6 +19,7 @@ class ShippingLabelMaker extends Component {
     render() {
         return (
             <div>
+                {(this.state.isComplete)}
                 <Wizard header={Header} wizardContext={{
                     from: {
                     name: "",
