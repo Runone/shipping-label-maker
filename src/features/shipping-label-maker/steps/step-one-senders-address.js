@@ -1,7 +1,7 @@
 import React from "react";
 
 const GetSendersAddress = (props) => {
-    const sender = props.wizardContext;
+    const sender  = props.wizardContext;
     const { onAction } = props;
     return (
         <div>

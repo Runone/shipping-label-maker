@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Wizard from "../../../src/core/components/wizard/wizard.js"
 import Header from "../../../src/core/header.js";
+import ShippingLabel from "./shipping-label.js";
 
 class ShippingLabelMaker extends Component {
     constructor(props) {
@@ -19,25 +20,29 @@ class ShippingLabelMaker extends Component {
     render() {
         return (
             <div>
-                {(this.state.isComplete)}
+                {(this.state.isComplete) ? (
+                    <ShippingLabel data={this.state.data}/>
+                ): (
                 <Wizard header={Header} wizardContext={{
                     from: {
-                    name: "",
-                    street: "",
-                    city: "",
-                    state: "",
-                    zip: ""
+                        name: "",
+                        street: "",
+                        city: "",
+                        state: "",
+                        zip: ""
                 },
                     to: {
-                    name: "",
-                    street: "",
-                    city: "",
-                    state: "",
-                    zip: ""
+                        name: "",
+                        street: "",
+                        city: "",
+                        state: "",
+                        zip: ""
                 },
                     weight: "",
                     shippingOption: 1
-                }} steps={["GetSenderAddress", "GetReceiverAddress", "GetWeight", "GetShippingOption", "Confirm"]} onComplete={this.createLabel}/>
+                }} steps={["GetSenderAddress", "GetReceiverAddress", "GetWeight", "GetShippingOption", "Confirm"]}
+                        onComplete={this.createLabel}/>
+                )}
             </div>
         )
     }
