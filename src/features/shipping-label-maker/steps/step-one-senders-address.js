@@ -18,7 +18,7 @@ const GetSendersAddress = (props) => {
             <input id="zip" type="text" value={sender.zip} onChange={onAction}/>
         </div>
     )
-}
+};
 
 export default GetSendersAddress;
 
