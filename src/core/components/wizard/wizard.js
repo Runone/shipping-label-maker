@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-
+import Header from "../../../core/header.js"
 
 class Wizard extends Component {
     constructor(props) {
@@ -12,7 +12,8 @@ class Wizard extends Component {
 
         this.nextSteps = this.nextSteps.bind(this);
         this.previousSteps = this.previousSteps.bind(this);
-        this.handleChange = this.handleChange.bind(this);
+        this.handleStateChange = this.handleStateChange.bind(this);
+        this.success = this.success.bind(this);
     }
     //proceed to next steps
     nextSteps() {
@@ -28,16 +29,23 @@ class Wizard extends Component {
             currentStep: currentStep - 1
         })
     }
-    //handle input field changes
-    handleChange = input => (event) => {
+    //handle input field changes to state
+    handleStateChange(event) {
+        const value = event.target.value;
+        const id = event.target.getAttribute("id");
         this.setState({
-            [input]: event.target.value
+            wizardContext: {...this.state.wizardContext, [id]: value}
         })
-    };
+    }
+    //handle complete label submission
+    success(value) {
+        this.props.onComplete(value);
+    }
+
     render() {
         return(
             <div>
-                <h1>Shipping Label Maker</h1>
+                <Header/>
             </div>
         )
     }
