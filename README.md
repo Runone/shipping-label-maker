@@ -1,8 +1,8 @@
-##Wizard-Shipping-Label-Maker
+## Wizard-Shipping-Label-Maker
 
 An application that collects shipping information from users and creates shipping labels. Form with multiple steps and confirmation. Frontend focused only. 
 
-##Notes
+## Notes
 The Wizard Component is the heart of this application. Wizard receives series of instructions of steps that will instruct users to create a shipping label from start to confirmation. Users are able to move forward or backwards between each steps.
 
 1. Senders Information
@@ -13,7 +13,7 @@ The Wizard Component is the heart of this application. Wizard receives series of
 6. Displays Label
 
 
-##Instructions On How to Run Application
+## Instructions On How to Run Application
 
 1. ``git clone https://github.com/Runone/shipping-label-maker.git``
 2. ``cd shipping-label-maker``
