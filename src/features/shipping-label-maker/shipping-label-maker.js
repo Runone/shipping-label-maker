@@ -6,25 +6,7 @@ class ShippingLabelMaker extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isComplete: false,
-            shippingInfo: {
-                from: {
-                    name: "",
-                    street: "",
-                    city: "",
-                    state: "",
-                    zip: ""
-                },
-                to: {
-                    name: "",
-                    street: "",
-                    city: "",
-                    state: "",
-                    zip: ""
-                },
-                weight: "",
-                shippingOption: 1
-            }
+            isComplete: false
         };
         this.createLabel = this.createLabel.bind(this);
     }
@@ -37,7 +19,24 @@ class ShippingLabelMaker extends Component {
     render() {
         return (
             <div>
-                <Wizard header={Header} wizardContext={this.state} onComplete={this.createLabel}/>
+                <Wizard header={Header} wizardContext={{
+                    from: {
+                    name: "",
+                    street: "",
+                    city: "",
+                    state: "",
+                    zip: ""
+                },
+                    to: {
+                    name: "",
+                    street: "",
+                    city: "",
+                    state: "",
+                    zip: ""
+                },
+                    weight: "",
+                    shippingOption: 1
+                }} steps={["GetSenderAddress", "GetReceiverAddress", "GetWeight", "GetShippingOption", "Confirm"]} onComplete={this.createLabel}/>
             </div>
         )
     }
