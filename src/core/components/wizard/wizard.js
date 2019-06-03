@@ -94,17 +94,18 @@ class Wizard extends Component {
 
     //wizard steps
     wizardSteps() {
-        switch (this.state.currentStep) {
+         switch (this.state.currentStep) {
             case 1:
-                return <GetSendersAddress wizardContext={this.state.wizardContext.from} onAction={this.handleSender}/>
+                return <GetSendersAddress wizardContext={this.state.wizardContext.from} onAction={this.handleSender}/>;
             case 2:
-                return <GetReceiversAddress wizardContext={this.state.wizardContext.to} onAction={this.handleReceiver}/>
+                return <GetReceiversAddress wizardContext={this.state.wizardContext.to} onAction={this.handleReceiver}/>;
             case 3:
-                return <GetWeight wizardContext={this.state.wizardContext.weight} onAction={this.handleWeight}/>
+                return <GetWeight wizardContext={this.state.wizardContext.weight} onAction={this.handleWeight}/>;
             case 4:
-                return <GetShippingOptions wizardContext={this.state.wizardContext.shippingOption} onAction={this.shipping}/>
+                return <GetShippingOptions wizardContext={this.state.wizardContext.shippingOption} onAction={this.shipping}/>;
             case 5:
-                return <Confirm wizardContext={this.state.wizardContext} onAction={this.success}/>
+                return <Confirm wizardContext={this.state.wizardContext} onAction={this.success}/>;
+             default:
         }
     }
 
