@@ -1,22 +1,20 @@
 import React from "react";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import ListSubheader from "@material-ui/core/ListSubheader";
+import TextField from "@material-ui/core/TextField";
 
 const GetReceiversAddress = (props) => {
     const receiver = props.wizardContext;
     const { onAction } = props;
     return (
-        <div>
-            <h4>Enter Receiver's Address</h4>
-            <label>Name:</label>
-            <input id="name" type="text" value={receiver.name} onChange={onAction} />
-            <label>Street:</label>
-            <input id="street" type="text" value={receiver.street} onChange={onAction}/>
-            <label>City:</label>
-            <input id="city" type="text" value={receiver.city} onChange={onAction}/>
-            <label>State:</label>
-            <input id="state" type="text" value={receiver.state} onChange={onAction}/>
-            <label>Zip:</label>
-            <input id="zip" type="text" value={receiver.zip} onChange={onAction}/>
-        </div>
+        <MuiThemeProvider>
+            <ListSubheader color="primary">Enter Receiver's Address</ListSubheader>
+            <TextField id="name" label="Full Name" type="text" margin="normal" value={receiver.name} onChange={onAction}/>
+            <TextField id="street" label="Street" type="text" margin="normal" value={receiver.street} onChange={onAction}/>
+            <TextField id="city" label="City" type="text" margin="normal" value={receiver.city} onChange={onAction}/>
+            <TextField id="state" label="State" type="text" margin="normal" value={receiver.state} onChange={onAction}/>
+            <TextField id="zip" label="Zip Code" type="text" margin="normal" value={receiver.zip} onChange={onAction}/>
+        </MuiThemeProvider>
     )
 };
 

@@ -1,22 +1,22 @@
 import React from "react";
+import { MuiThemeProvider } from "@material-ui/core/styles";
+import ListSubheader from "@material-ui/core/ListSubheader";
+import TextField from "@material-ui/core/TextField";
+
+
 
 const GetSendersAddress = (props) => {
     const sender  = props.wizardContext;
     const { onAction } = props;
     return (
-        <div>
-            <h4>Enter Sender's Address</h4>
-            <label>Name:</label>
-            <input id="name" type="text" value={sender.name} onChange={onAction} />
-            <label>Street:</label>
-            <input id="street" type="text" value={sender.street} onChange={onAction}/>
-            <label>City:</label>
-            <input id="city" type="text" value={sender.city} onChange={onAction}/>
-            <label>State:</label>
-            <input id="state" type="text" value={sender.state} onChange={onAction}/>
-            <label>Zip:</label>
-            <input id="zip" type="text" value={sender.zip} onChange={onAction}/>
-        </div>
+        <MuiThemeProvider>
+            <ListSubheader color="primary">Enter Sender's Address</ListSubheader>
+            <TextField id="name" label="Full Name" type="text" margin="normal" value={sender.name} onChange={onAction}/>
+            <TextField id="street" label="Street" type="text" margin="normal" value={sender.street} onChange={onAction}/>
+            <TextField id="city" label="City" type="text" margin="normal" value={sender.city} onChange={onAction}/>
+            <TextField id="state" label="State" type="text" margin="normal" value={sender.state} onChange={onAction}/>
+            <TextField id="zip" label="Zip Code" type="text" margin="normal" value={sender.zip} onChange={onAction}/>
+        </MuiThemeProvider>
     )
 };
 
