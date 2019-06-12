@@ -15,7 +15,7 @@ const GetWeight = (props) => {
                 Pounds
             </Typography>
         </MuiThemeProvider>
-    )
+    );
 };
 
 export default GetWeight;

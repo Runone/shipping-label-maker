@@ -58,7 +58,7 @@ const Confirm = (props) => {
             </Typography>
             <Button variant="contained" color="primary" onClick={confirmInfo}>Confirm</Button>
         </MuiThemeProvider>
-    )
+    );
 };
 
 export default Confirm;

@@ -12,7 +12,7 @@ const Header = props => {
                 </Typography>
             </Toolbar>
         </AppBar>
-    )
+    );
 };
 
 export default Header;
