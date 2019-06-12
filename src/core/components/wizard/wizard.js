@@ -27,8 +27,7 @@ class Wizard extends Component {
     }
 
     //proceed to next steps
-    nextSteps(event) {
-        event.preventDefault();
+    nextSteps() {
         const {currentStep} = this.state;
         this.setState({
             currentStep: currentStep + 1
@@ -36,8 +35,7 @@ class Wizard extends Component {
     }
 
     //go back previous steps
-    previousSteps(event) {
-        event.preventDefault();
+    previousSteps() {
         const {currentStep} = this.state;
         this.setState({
             currentStep: currentStep - 1
