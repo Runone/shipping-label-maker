@@ -15,7 +15,7 @@ const GetReceiversAddress = (props) => {
             <TextField id="state" label="State" type="text" margin="normal" value={receiver.state} onChange={onAction}/>
             <TextField id="zip" label="Zip Code" type="text" margin="normal" value={receiver.zip} onChange={onAction}/>
         </MuiThemeProvider>
-    )
+    );
 };
 
 export default GetReceiversAddress;

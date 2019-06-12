@@ -56,7 +56,7 @@ const ShippingLabel = (props) => {
                 <Box fontFamily="Monospace" fontSize="h3.fontSize" m={1}>{weight.weight} Lbs</Box>
             </Typography>
         </MuiThemeProvider>
-    )
+    );
 };
 
 export default ShippingLabel;

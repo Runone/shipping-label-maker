@@ -12,7 +12,7 @@ const NavButtons = props => {
                 <Button variant="contained" color="primary" onClick={nextSteps}>Next</Button>
             )}
         </div>
-    )
+    );
 };
 
 export default NavButtons;

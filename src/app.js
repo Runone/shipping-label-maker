@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ShippingLabelMaker from "./features/shipping-label-maker/shipping-label-maker.js"
+import ShippingLabelMaker from "./features/shipping-label-maker/shipping-label-maker.js";
 
 class App extends Component {
     render() {
@@ -7,7 +7,7 @@ class App extends Component {
             <div>
                 <ShippingLabelMaker />
             </div>
-        )
+        );
     }
 }
 
