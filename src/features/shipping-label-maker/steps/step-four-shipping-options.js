@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import ListSubheader from "@material-ui/core/ListSubheader";
 
 const GetShippingOptions = (props) => {
@@ -10,6 +11,11 @@ const GetShippingOptions = (props) => {
             <input id="shippingOption" name="shipping" type="radio" value="2" onChange={onAction} /> Priority
         </div>
     );
+};
+
+GetShippingOptions.propTypes = {
+    wizardContext: PropTypes.object.isRequired,
+    onAction: PropTypes.func.isRequired,
 };
 
 export default GetShippingOptions;

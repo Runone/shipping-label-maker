@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import ListSubheader from "@material-ui/core/ListSubheader";
 import TextField from "@material-ui/core/TextField";
@@ -16,6 +17,11 @@ const GetWeight = (props) => {
             </Typography>
         </MuiThemeProvider>
     );
+};
+
+GetWeight.propTypes = {
+    wizardContext: PropTypes.object.isRequired,
+    onAction: PropTypes.func.isRequired,
 };
 
 export default GetWeight;

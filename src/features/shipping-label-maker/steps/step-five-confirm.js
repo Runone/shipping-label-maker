@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { getShippingCost, getShippingOption} from "../../../features/shipping-label-maker/shipping-cost.js";
 import { MuiThemeProvider } from "@material-ui/core/styles";
 import ListSubheader from "@material-ui/core/ListSubheader";
@@ -59,6 +60,11 @@ const Confirm = (props) => {
             <Button variant="contained" color="primary" onClick={confirmInfo}>Confirm</Button>
         </MuiThemeProvider>
     );
+};
+
+Confirm.propTypes = {
+    wizardContext: PropTypes.object.isRequired,
+    onAction: PropTypes.func.isRequired,
 };
 
 export default Confirm;
